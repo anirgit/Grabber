@@ -45,7 +45,7 @@ object GrabberLogic {
   }
 
   private[this] def findAndInsert(info: Usage) = {
-    db.run(usageInfo.filter(_.nodeId === info.nodeId).result.headOption)
+    db.run(usageInfo.filter(_.nodeId === info.nodeId).map(_.kb).sum.result)
       .map(
         _.fold(
           {
@@ -53,13 +53,13 @@ object GrabberLogic {
             info
           }
         )
-        (dbUsage => {
-          logger.debug(s"Found existing usage for nodeId: ${dbUsage.nodeId}")
-          info.copy(kbUsed = info.kbUsed - dbUsage.kbUsed)
+        (totalKBFromDB => {
+          logger.debug(s"Found existing usage for nodeId: ${info.nodeId}")
+          info.copy(kbUsed = info.kbUsed - totalKBFromDB)
         }
         )
       )
-      .flatMap(simpleInsert(_))
+      .flatMap(simpleInsert)
   }
 
   private[this] def simpleInsert(info: Usage) = {
