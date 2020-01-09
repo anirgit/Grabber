@@ -1,0 +1,55 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Scala template
+*.class
+*.log
+*.jar
+log/
+.tmp*
+.dbconfig
+*.jks
+
+test.db
+
+# sbt specific
+.cache
+.history
+.lib/
+dist/*
+/MockService/target
+/Grabber/Solution/target
+/Grabber/MockService/target
+/Grabber/project/target
+target/
+/project/target/*
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+report.xml
+local.sbt
+
+# IntelliJ IDEA specific
+/Grabber/.idea
+.idea/
+.metals
+.vscode/*.json
+.bloop
+.scala_dependencies
+.worksheet
+
+# ENSIME specific
+.ensime_cache/
+.ensime
+
+.DS_Store
+
+### Archives
+*.zip
+*.tar
+# Eclipse (Scala IDE) specific
+.classpath
+.project
+.settings
+.cache-main
+.cache-tests
+eclipse-bin/
