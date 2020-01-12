@@ -31,7 +31,7 @@ lazy val commonDependency = Seq(
 
 lazy val dbDependency = Seq(
   "com.typesafe.slick" %% "slick" % "3.3.2",
-  "org.xerial"          % "sqlite-jdbc"     % "3.7.2",
+  "org.xerial"          % "sqlite-jdbc"     % "3.8.11.2",
   "com.typesafe.slick" %% "slick-hikaricp"  % "3.2.2",
   "com.h2database"      % "h2"              % "1.4.197"
 )

@@ -5,7 +5,6 @@ import akka.http.scaladsl._
 import akka.http.scaladsl.model.HttpRequest
 import akka.stream.{ActorAttributes, ActorMaterializer, Supervision}
 import akka.stream.scaladsl.{Sink, Source}
-import akka.util.ByteString
 import slick.lifted.TableQuery
 import slick.jdbc.SQLiteProfile.api._
 import scala.concurrent.duration.DurationInt

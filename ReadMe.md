@@ -21,7 +21,7 @@ If the MockService needs to be available on localhost, then go to `/Grabber` fol
 ```
  sbt mockService/run
  ```
- Once mockService module is up, then from `/Grabber` folder run the shell script
+ Once mockService module is up, then from `/grabber` folder run the shell script
  ```
  ./run.sh <desired number of nodes>
 ```

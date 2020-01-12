@@ -2,6 +2,7 @@
 set -e ## exit of any error
 echo "Invoked $0 with $@"
 echo "Running as user $(whoami)"
+export SQLITE_URL="jdbc:sqlite:/usr/local/opt/sqlite/test.db"
 numOfNodes=$1
 if [ "${numOfNodes}" = "" ]
 then
